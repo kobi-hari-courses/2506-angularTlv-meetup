@@ -1,0 +1,73 @@
+import { User } from '../models/user.model';
+const users: User[] = [
+  {
+    name: 'Bradley Chavez',
+    photo: 'users/m01.jpg',
+    mobile: '+4 315 23 62',
+    email: 'bchavez@norsk-op.com',
+    status: 'Active',
+  },
+  {
+    name: 'Kent Stone',
+    photo: 'users/m04.jpg',
+    mobile: '+4 440 85 45',
+    email: 'kstone@norsk-op.com',
+    status: 'Active',
+  },    
+  {
+    name: 'Brandie West',
+    photo: 'users/f01.jpg',
+    mobile: '+4 418 37 63',
+    email: 'bwest@norsk-op.com',
+    status: 'Inactive',
+  },
+  {
+    name: 'Sandra Black',
+    photo: 'users/f02.jpg',
+    mobile: '+4 551 37 85',
+    email: 'sblack@norsk-op.com',
+    status: 'Active',
+  },
+  {
+    name: 'Gerald Jones',
+    photo: 'users/m02.jpg',
+    mobile: '+4 315 23 62',
+    email: 'gjones@norsk-op.com',
+    status: 'Inactive',
+  },
+  {
+    name: 'Michael Adams',
+    photo: 'users/m03.jpg',
+    mobile: '+4 390 85 45',
+    email: 'madams@norsk-op.com',
+    status: 'Active',
+  },
+  {
+    name: 'Paula Wilson',
+    photo: 'users/f03.jpg',
+    mobile: '+4 454 55 95',
+    email: 'pwilson@norsk-op.com',
+    status: 'Inactive',
+  },
+  {
+    name: 'Emma Gonzales',
+    photo: 'users/f04.jpg',
+    mobile: '+4 654 32 10',
+    email: 'egonzales@norsk-op.com',
+    status: 'Active',
+  },
+  {
+    name: 'Christina Peterson',
+    photo: 'users/f05.jpg',
+    mobile: '+4 123 45 67',
+    email: 'cpetersen@norsk-op.com',
+    status: 'Active',
+  },
+  {
+    name: 'Clara Cunningham',
+    photo: 'users/f06.jpg',
+    mobile: '+4 654 32 11',
+    email: 'ccunningham@norsk-op.com',
+    status: 'Active',
+  },
+];
