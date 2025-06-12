@@ -1,0 +1,23 @@
+@use 'symbols';
+
+
+@mixin go() {
+  html,
+  body {
+    height: 100vh;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+
+  @include symbols.go();
+}
