@@ -16,4 +16,24 @@
     grid-column: 1;
     grid-row: 2;
   }
+
+  .main-content {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 1.5em 2em;
+    border-radius: 0.7em;
+    background-color: white;
+    position: relative;
+
+
+    .scrollable {
+      overflow-y: auto;
+      position: absolute;
+      top: 0.5em;
+      bottom: 0.5em;
+      left: 0.5em;
+      right: 0.5em;
+      
+    }
+  }
 }
