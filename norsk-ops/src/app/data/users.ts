@@ -1,5 +1,5 @@
 import { User } from '../models/user.model';
-const users: User[] = [
+export const ALL_USERS: User[] = [
   {
     name: 'Bradley Chavez',
     photo: 'users/m01.jpg',
