@@ -1,5 +1,6 @@
 @use 'symbols';
 @use 'buttons';
+@use 'typography';
 
 
 @mixin go() {
@@ -22,4 +23,5 @@
 
   @include symbols.go();
   @include buttons.go();
+  @include typography.go();
 }
