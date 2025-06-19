@@ -1,1 +1,9 @@
-<p>users-page works!</p>
+<div class="header">
+    <h1>Users</h1>
+    <button primary>Create User</button>
+    <button secondary>Import Users</button>
+    <button secondary>Export Users</button>
+
+    <app-select-button [options]="['All', 'Active', 'Inactive']"
+                        selected="All"/>
+</div>

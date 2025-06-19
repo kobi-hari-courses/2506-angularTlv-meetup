@@ -1,0 +1,35 @@
+@mixin go() {
+    button[primary] {
+        background-color: #796ece;
+        color: #fff;
+        padding: 0.6em 0.8em;
+        border: 1px solid #524491;
+        outline: none;
+        border-radius: 3px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #524491;
+        }
+    }
+
+    button[secondary] {
+        background-color: #f0f0f0;
+        color: #34276d;
+        padding: 0.6em 0.8em;
+        border: 1px solid #524491;
+        outline: none;
+        border-radius: 3px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #c0bedb;
+        }
+    }
+
+
+}

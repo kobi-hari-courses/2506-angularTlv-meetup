@@ -1,4 +1,5 @@
 @use 'symbols';
+@use 'buttons';
 
 
 @mixin go() {
@@ -20,4 +21,5 @@
   }
 
   @include symbols.go();
+  @include buttons.go();
 }
