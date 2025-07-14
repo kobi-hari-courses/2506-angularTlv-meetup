@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FakeChatBotService } from '../../services/fake-chat-bot-service';
 import { FormsModule } from '@angular/forms';
+import { ChatService } from '../../services/chat-service';
 
 @Component({
   selector: 'app-fake-chat',
@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppFakeChatComponent {
   messageInput = signal('');
-  constructor(public bot: FakeChatBotService) { }
+  constructor(public bot: ChatService) { }
   send() {
     const value = this.messageInput().trim();
     if (value) {

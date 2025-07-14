@@ -60,7 +60,7 @@
       @for(bar of bars; track bar.label) {
       <rect [attr.x]="bar.x" [attr.y]="bar.y" 
             [attr.width]="bar.width" [attr.height]="bar.height" 
-            [attr.fill]="bar.fill" rx="4" />
+            [attr.fill]="bar.fill" rx="2" />
       <text [attr.x]="bar.x + 25" [attr.y]="bar.y - 4" class="bar-value" text-anchor="middle">{{bar.value}}</text>
       <text [attr.x]="bar.x + 25" y="110" class="bar-label" text-anchor="middle">{{bar.label}}</text>
 
