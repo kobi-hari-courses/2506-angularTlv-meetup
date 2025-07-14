@@ -7,16 +7,14 @@ import { ChatMessage } from '../models/chat-message.model';
 export class ChatBotLogicService {
   private engine: MLCEngineInterface | null = null;
   private loadingPromise: Promise<void> | null = null;
-  private readonly model = 'Llama-3.1-8B-Instruct-q4f32_1-MLC'; // Change if needed
-
+private readonly model = 'Phi-3-mini-4k-instruct-q4f32_1-MLC';
   /** Call this ONCE at app startup (via app initializer) */
   init(): Promise<void> {
     if (this.engine) return Promise.resolve();
     if (!this.loadingPromise) {
-      this.loadingPromise = CreateMLCEngine(this.model, {
-        initProgressCallback: p =>
-          console.log(`WebLLM loading: ${Math.round((p.progress || 0) * 100)}%`)
-      }).then(engine => { this.engine = engine; });
+      this.loadingPromise = CreateMLCEngine(this.model, {})
+        .then(engine => { this.engine = engine; })
+        .then(_ => console.log('Chat engine initialized:', this.model))
     }
     return this.loadingPromise;
   }

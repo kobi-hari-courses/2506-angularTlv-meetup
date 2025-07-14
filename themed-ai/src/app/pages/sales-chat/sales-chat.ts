@@ -5,7 +5,7 @@ import { CHAT_PROMPT, provideSales, SALES_CHAT_PROMPT } from '../../services/cha
 
 @Component({
   templateUrl: './sales-chat.html',
-  styleUrls: ['./sales-chat.css'],
+  styleUrls: ['./sales-chat.scss'],
   providers: [ChatService, ...provideSales()],
   imports: [AppFakeChatComponent],
   standalone: true,

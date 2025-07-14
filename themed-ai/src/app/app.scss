@@ -11,9 +11,9 @@
     grid-area: toolbar;
     background: linear-gradient(
       90deg,
-      var(--p-05) 60%,
-      var(--p-04) 80%,
-      var(--p-02) 100%
+      var(--p-07) 60%,
+      var(--p-08) 80%,
+      var(--p-09) 100%
     );
     color: var(--n-00);
     display: flex;
@@ -36,7 +36,6 @@
 
       .icon-main {
         color: var(--p-02);
-        background: linear-gradient(120deg, var(--p-05), var(--p-03));
         border-radius: 50%;
         padding: 6px;
       }
@@ -45,14 +44,13 @@
 
   .app-sidebar {
     grid-area: sidebar;
-    background: linear-gradient(180deg, var(--p-06) 70%, var(--p-07) 100%);
+    background: var(--p-02);
     color: var(--n-00);
     padding: 24px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-right: 2px solid var(--p-08);
-    box-shadow: 2px 0 10px var(--n-02);
+    border-right: 1px solid var(--p-08);
 
     nav {
       display: flex;
@@ -61,30 +59,33 @@
 
       a {
         padding: 12px 24px;
-        color: var(--n-00);
+        background: transparent;
+        color: var(--p-08);
         text-decoration: none;
         font-weight: 500;
         border-left: 4px solid transparent;
         transition: background 0.2s, border-color 0.2s;
-        border-radius: 0 20px 20px 0;
-        background: var(--p-07);
         display: flex;
         flex-direction: row;
         align-items: center;
 
-        &.active,
-        &:hover {
-          background: var(--a-03);
-          color: var(--p-08);
+        &.active {
+          background: var(--p-04);
+          color: var(--p-10);
           border-left: 4px solid var(--a-05);
 
           .icon-nav {
-            color: var(--a-06);
+            color: var(--p-09);
           }
         }
 
+        &:hover:not(.active) {
+          background: var(--p-03);
+          color: var(--p-08);
+        }
+
         .icon-nav {
-          color: var(--p-01);
+          color: var(--p-05);
           margin-right: 10px;
         }
       }
@@ -98,4 +99,3 @@
     min-height: 0;
   }
 }
-
