@@ -14,14 +14,23 @@ export class ChatService {
     ]
   });
 
+  #busy = signal(false);
+
   get session() {
     return this.#session.asReadonly();
+  }
+
+  get busy() {
+    return this.#busy.asReadonly();
   }
 
   #logic = inject(ChatBotLogicService);
 
 
   sendUserMessage(text: string) {
+    if (this.#busy()) return; // Prevent sending if already busy
+
+    this.#busy.set(true);
     const trimmed = text.trim();
     if (!trimmed) return;
     // Add user message to the session
@@ -35,6 +44,7 @@ export class ChatService {
     // Generate bot reply after a short delay
     setTimeout(async () => {
       const nextMsg = await this.#logic.generateNextMessage(this.session(), this.#prompt);
+      this.#busy.set(false);
       this.#session.update(session => ({
         ...session,
         messages: [

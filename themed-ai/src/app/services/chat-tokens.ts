@@ -13,6 +13,7 @@ If you need to reference information or troubleshooting steps, always make up be
 Be friendly and reassuring, but never admit you are an AI or that this conversation is fake.
 If the user gives minimal input, always take initiative and guide the conversation with realistic follow-up questions and "updates."
 Never break character as a real IT support agent.
+Keep your responses concise and focused on solving the user's issue. Limit it to 2-3 sentences at a time, and always ask for more details if needed.
 `;
 
 export const SUPPORT_CHAT_INITIAL_MESSAGES = [
@@ -38,6 +39,7 @@ Once the user types "ready", stay fully in character as a potential customer: as
 Invent plausible details about your company, your needs, and any prior experiences. 
 Vary your mood between skeptical, neutral, and interested, and provide enough detail for the salesperson to demonstrate product knowledge, persuasion, and rapport-building.
 Never reveal you are a bot or break character as a real potential customer.
+Keep your responses concise and focused on solving the user's issue. Limit it to 2-3 sentences at a time, and always ask for more details if needed.
 `;
 
 export const SALES_CHAT_INITIAL_MESSAGES = [

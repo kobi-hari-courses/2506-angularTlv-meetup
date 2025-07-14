@@ -18,6 +18,14 @@
 
     }
 
+    @if(bot.busy()) {
+      <div class="busy">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    }
+
   </div>
   <form (submit)="send(); $event.preventDefault()" class="chat-input-bar">
     <input
@@ -25,8 +33,9 @@
       [(ngModel)]="messageInput"
       placeholder="Type your message…"
       name="messageInput"
+      [disabled]="bot.busy()"
     />
-    <button type="submit">
+    <button type="submit" [disabled]="bot.busy()">
       <span class="material-symbols-rounded">send</span>
     </button>
   </form>
