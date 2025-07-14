@@ -1,135 +1,101 @@
-.app-root {
+:host {
   display: grid;
   grid-template-areas:
-    'toolbar toolbar'
-    'sidebar main';
+    "toolbar toolbar"
+    "sidebar main";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 220px 1fr;
   min-height: 100vh;
-}
 
-.app-toolbar {
-  grid-area: toolbar;
-  background: linear-gradient(
-    90deg,
-    var(--p-05) 60%,
-    var(--p-04) 80%,
-    var(--p-02) 100%
-  );
-  color: var(--n-00);
-  display: flex;
-  align-items: center;
-  padding: 0 32px;
-  font-size: 1.25rem;
-  box-shadow: 0 2px 4px var(--n-02);
-  justify-content: space-between;
-}
+  .app-toolbar {
+    grid-area: toolbar;
+    background: linear-gradient(
+      90deg,
+      var(--p-05) 60%,
+      var(--p-04) 80%,
+      var(--p-02) 100%
+    );
+    color: var(--n-00);
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    font-size: 1.25rem;
+    box-shadow: 0 2px 4px var(--n-02);
+    justify-content: space-between;
 
-.app-sidebar {
-  grid-area: sidebar;
-  background: linear-gradient(
-    180deg,
-    var(--p-06) 70%,
-    var(--p-07) 100%
-  );
-  color: var(--n-00);
-  padding: 24px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  border-right: 2px solid var(--p-08);
-  box-shadow: 2px 0 10px var(--n-02);
-}
+    .logo {
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      font-size: 1.3em;
 
-.app-sidebar nav {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+      .material-symbols-rounded {
+        vertical-align: middle;
+        font-size: 1.4em;
+        transition: color 0.2s;
+      }
 
-.app-sidebar a {
-  padding: 12px 24px;
-  color: var(--n-00);
-  text-decoration: none;
-  font-weight: 500;
-  border-left: 4px solid transparent;
-  transition: background 0.2s, border-color 0.2s;
-  border-radius: 0 20px 20px 0;
-  background: var(--p-07);
-}
-
-.app-sidebar a.active,
-.app-sidebar a:hover {
-  background: var(--a-03);
-  color: var(--p-08);
-  border-left: 4px solid var(--a-05);
-}
-
-.logo {
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  font-size: 1.3em;
-}
-
-.user-avatar {
-  background: var(--a-05);
-  color: var(--n-00);
-  border-radius: 50%;
-  padding: 10px;
-  font-size: 1.1em;
-  margin-left: auto;
-}
-
-.material-symbols-rounded {
-  vertical-align: middle;
-  font-size: 1.4em;
-  transition: color 0.2s;
-}
-
-.icon-main {
-  color: var(--p-02);
-  background: linear-gradient(120deg, var(--p-05), var(--p-03));
-  border-radius: 50%;
-  padding: 6px;
-}
-.icon-nav {
-  color: var(--p-01);
-  margin-right: 10px;
-}
-.icon-accent {
-  color: var(--a-04);
-  background: linear-gradient(140deg, var(--a-03), var(--a-05), var(--a-06));
-  border-radius: 50%;
-  padding: 6px;
-}
-.app-sidebar a.active .icon-nav,
-.app-sidebar a:hover .icon-nav {
-  color: var(--a-06);
-}
-
-.app-main {
-  grid-area: main;
-  background: var(--n-01);
-  padding: 32px;
-  overflow: auto;
-  min-height: 0;
-}
-
-@media (max-width: 700px) {
-  .app-root {
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 60px 1fr;
+      .icon-main {
+        color: var(--p-02);
+        background: linear-gradient(120deg, var(--p-05), var(--p-03));
+        border-radius: 50%;
+        padding: 6px;
+      }
+    }
   }
+
   .app-sidebar {
-    padding: 0;
-    border-right: none;
-  }
-  .app-sidebar a {
-    font-size: 0.9em;
-    padding: 10px 8px;
-    border-radius: 0 12px 12px 0;
+    grid-area: sidebar;
+    background: linear-gradient(180deg, var(--p-06) 70%, var(--p-07) 100%);
+    color: var(--n-00);
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-right: 2px solid var(--p-08);
+    box-shadow: 2px 0 10px var(--n-02);
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        padding: 12px 24px;
+        color: var(--n-00);
+        text-decoration: none;
+        font-weight: 500;
+        border-left: 4px solid transparent;
+        transition: background 0.2s, border-color 0.2s;
+        border-radius: 0 20px 20px 0;
+        background: var(--p-07);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &.active,
+        &:hover {
+          background: var(--a-03);
+          color: var(--p-08);
+          border-left: 4px solid var(--a-05);
+
+          .icon-nav {
+            color: var(--a-06);
+          }
+        }
+
+        .icon-nav {
+          color: var(--p-01);
+          margin-right: 10px;
+        }
+      }
+    }
   }
   .app-main {
-    padding: 12px;
+    grid-area: main;
+    background: var(--n-01);
+    padding: 32px;
+    overflow: auto;
+    min-height: 0;
   }
 }
+
