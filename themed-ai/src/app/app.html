@@ -1,0 +1,28 @@
+<div class="app-root">
+  <header class="app-toolbar">
+    <span class="logo">
+      <span class="material-symbols-rounded icon-main">chat</span>
+      Chat Demo
+    </span>
+    <span class="user-avatar">
+      <span class="material-symbols-rounded icon-accent">person</span>
+    </span>
+  </header>
+  <aside class="app-sidebar">
+    <nav>
+      @for(item of navItems(); track item.path) {
+          <a
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.path === '' }"
+          >
+            <span class="material-symbols-rounded icon-nav">{{ item.icon }}</span>
+            {{ item.label }}
+          </a>
+      }
+    </nav>
+  </aside>
+  <main class="app-main">
+    <router-outlet></router-outlet>
+  </main>
+</div>

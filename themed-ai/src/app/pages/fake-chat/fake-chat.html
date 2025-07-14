@@ -1,0 +1,28 @@
+<div class="chat-container">
+  <div class="messages">
+    <div
+      *ngFor="let msg of bot.messages()"
+      [ngClass]="{'user': msg.from === 'user', 'bot': msg.from === 'bot'}"
+      class="msg"
+    >
+      <span
+        class="material-symbols-rounded msg-icon"
+        [ngClass]="{'icon-user': msg.from === 'user', 'icon-bot': msg.from === 'bot'}"
+      >
+        {{ msg.from === 'user' ? 'person' : 'smart_toy' }}
+      </span>
+      <span class="msg-text">{{ msg.text }}</span>
+    </div>
+  </div>
+  <form (submit)="send(); $event.preventDefault()" class="chat-input-bar">
+    <input
+      type="text"
+      [(ngModel)]="messageInput"
+      (ngModelChange)="messageInput.set($event)"
+      placeholder="Type your message…"
+    />
+    <button type="submit">
+      <span class="material-symbols-rounded">send</span>
+    </button>
+  </form>
+</div>
