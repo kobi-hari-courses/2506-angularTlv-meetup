@@ -1,9 +1,139 @@
-.page {
-  background: var(--n-00);
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: 0 2px 10px var(--n-03);
-}
-h1 {
-  color: var(--p-07);
+:host {
+  display: block;
+
+  .page {
+    background: var(--n-00);
+    padding: 32px;
+    border-radius: 10px;
+    max-width: 880px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h1 {
+      color: var(--p-07);
+      .icon-accent {
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+    }
+
+    .about-app,
+    .quick-tips,
+    .fun-fact {
+      padding: 14px 18px;
+      background: var(--n-01);
+      border-radius: 8px;
+      font-size: 1.05em;
+    }
+    .about-app h3,
+    .quick-tips h3 {
+      margin-top: 0;
+      color: var(--p-07);
+      font-size: 1.12em;
+      margin-bottom: 7px;
+    }
+    .quick-tips ul {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--n-08);
+    }
+    .fun-fact {
+      background: var(--a-01);
+      color: var(--a-08);
+      display: flex;
+      align-items: center;
+      font-size: 1.08em;
+      gap: 10px;
+      .icon-accent {
+        font-size: 1.2em;
+      }
+    }
+    .dashboard-stats {
+      display: flex;
+      gap: 24px;
+
+      .stat-card {
+        flex: 1 1 0;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        padding: 18px 16px;
+        gap: 16px;
+        box-shadow: none;
+        border: 1.5px solid var(--n-02);
+        background: var(--p-01);
+        &.primary {
+          background: var(--p-02);
+          color: var(--p-09);
+          border: none;
+        }
+        &.accent {
+          background: var(--a-03);
+          color: var(--a-09);
+          border: none;
+        }
+        &.dark-primary {
+          background: var(--p-07);
+          color: var(--n-00);
+          border: none;
+        }
+        .stat-icon {
+          font-size: 2.2em;
+          opacity: 0.7;
+        }
+        .stat-info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+          }
+          .stat-label {
+            font-size: 1em;
+            opacity: 0.78;
+          }
+        }
+      }
+    }
+
+    .dashboard-chart {
+      padding: 16px 16px 20px 16px;
+      background: linear-gradient(90deg, var(--p-01) 80%, var(--n-00) 100%);
+      border-radius: 10px;
+      border: 1px solid var(--n-03);
+
+      h2 {
+        display: flex;
+        align-items: center;
+        font-size: 1.1em;
+        color: var(--p-08);
+        margin-bottom: 12px;
+        gap: 10px;
+        .icon-accent {
+          margin-right: 6px;
+        }
+      }
+
+      svg {
+        width: 100%;
+        max-width: 520px;
+        height: 110px;
+        display: block;
+      }
+      /* Flat bar look: */
+      .bar-label {
+        font-size: 13px;
+        font-weight: 500;
+        fill: var(--n-07);
+      }
+      .bar-value {
+        font-size: 15px;
+        font-weight: bold;
+        fill: var(--n-10);
+      }
+    }
+  }
 }

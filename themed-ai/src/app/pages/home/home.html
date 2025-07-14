@@ -3,5 +3,84 @@
     <span class="material-symbols-rounded icon-accent">forum</span>
     Welcome!
   </h1>
-  <p>This is a demo home page for a themable Angular chat-bot app.</p>
+  <div class="about-app">
+    <h3>About This Demo</h3>
+    <p>
+      This app demonstrates a modern, themable Angular chat interface for
+      support and sales teams. It features separate chatbots for each
+      department, a fully responsive layout, and theme colors powered by CSS
+      custom properties.
+      <br />
+      The dashboard shows live (simulated) chat activity so you can track
+      engagement across your teams.
+    </p>
+  </div>
+
+  <div class="quick-tips">
+    <h3>Quick Tips</h3>
+    <ul>
+      <li>
+        You can <b>switch between Support and Sales chats</b> using the sidebar.
+      </li>
+      <li>Each department has its own chatbot—try sending a message!</li>
+    </ul>
+  </div>
+
+  <div class="dashboard-stats">
+    <div class="stat-card primary">
+      <span class="material-symbols-rounded stat-icon">chat</span>
+      <div class="stat-info">
+        <div class="stat-number">528</div>
+        <div class="stat-label">Messages Today</div>
+      </div>
+    </div>
+    <div class="stat-card accent">
+      <span class="material-symbols-rounded stat-icon">support_agent</span>
+      <div class="stat-info">
+        <div class="stat-number">134</div>
+        <div class="stat-label">Support Requests</div>
+      </div>
+    </div>
+    <div class="stat-card dark-primary">
+      <span class="material-symbols-rounded stat-icon">groups</span>
+      <div class="stat-info">
+        <div class="stat-number">17</div>
+        <div class="stat-label">Active Chats</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-chart">
+    <h2>
+      <span class="material-symbols-rounded icon-accent">bar_chart</span>
+      Messages by Department
+    </h2>
+
+    <svg viewBox="0 0 420 120">
+      <!-- Support -->
+      <rect x="20" y="50" width="50" height="38" fill="var(--p-03)" rx="4" />
+      <text x="45" y="46" class="bar-value" text-anchor="middle">320</text>
+      <text x="45" y="110" class="bar-label" text-anchor="middle">Support</text>
+      <!-- Sales -->
+      <rect x="90" y="70" width="50" height="18" fill="var(--p-05)" rx="4" />
+      <text x="115" y="66" class="bar-value" text-anchor="middle">120</text>
+      <text x="115" y="110" class="bar-label" text-anchor="middle">Sales</text>
+      <!-- General -->
+      <rect x="160" y="35" width="50" height="53" fill="var(--p-07)" rx="4" />
+      <text x="185" y="31" class="bar-value" text-anchor="middle">520</text>
+      <text x="185" y="110" class="bar-label" text-anchor="middle">
+        General
+      </text>
+      <!-- Tech -->
+      <rect x="230" y="85" width="50" height="3" fill="var(--p-09)" rx="4" />
+      <text x="255" y="81" class="bar-value" text-anchor="middle">55</text>
+      <text x="255" y="110" class="bar-label" text-anchor="middle">Tech</text>
+    </svg>
+  </div>
+
+  <div class="fun-fact">
+  <span class="material-symbols-rounded icon-accent">lightbulb</span>
+  <b>Did you know?</b> Over 67% of customers worldwide have interacted with a chatbot in the past year!
+</div>
+
 </section>
