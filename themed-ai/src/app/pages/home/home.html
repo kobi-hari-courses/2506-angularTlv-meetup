@@ -57,24 +57,14 @@
     </h2>
 
     <svg viewBox="0 0 420 120">
-      <!-- Support -->
-      <rect x="20" y="50" width="50" height="38" fill="var(--p-03)" rx="4" />
-      <text x="45" y="46" class="bar-value" text-anchor="middle">320</text>
-      <text x="45" y="110" class="bar-label" text-anchor="middle">Support</text>
-      <!-- Sales -->
-      <rect x="90" y="70" width="50" height="18" fill="var(--p-05)" rx="4" />
-      <text x="115" y="66" class="bar-value" text-anchor="middle">120</text>
-      <text x="115" y="110" class="bar-label" text-anchor="middle">Sales</text>
-      <!-- General -->
-      <rect x="160" y="35" width="50" height="53" fill="var(--p-07)" rx="4" />
-      <text x="185" y="31" class="bar-value" text-anchor="middle">520</text>
-      <text x="185" y="110" class="bar-label" text-anchor="middle">
-        General
-      </text>
-      <!-- Tech -->
-      <rect x="230" y="85" width="50" height="3" fill="var(--p-09)" rx="4" />
-      <text x="255" y="81" class="bar-value" text-anchor="middle">55</text>
-      <text x="255" y="110" class="bar-label" text-anchor="middle">Tech</text>
+      @for(bar of bars; track bar.label) {
+      <rect [attr.x]="bar.x" [attr.y]="bar.y" 
+            [attr.width]="bar.width" [attr.height]="bar.height" 
+            [attr.fill]="bar.fill" rx="4" />
+      <text [attr.x]="bar.x + 25" [attr.y]="bar.y - 4" class="bar-value" text-anchor="middle">{{bar.value}}</text>
+      <text [attr.x]="bar.x + 25" y="110" class="bar-label" text-anchor="middle">{{bar.label}}</text>
+
+      }
     </svg>
   </div>
 
