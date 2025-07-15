@@ -6,7 +6,7 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 220px 1fr;
   min-height: 100vh;
-  --primary: oklch(from var(--selected-color) clamp(0.4, l, 0.6) max(c, 0.08) h);
+  --primary: oklch(from var(--selected-color) 0.6 max(c, 0.08) h);
 
 
   .app-toolbar {
