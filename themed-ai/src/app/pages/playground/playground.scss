@@ -14,26 +14,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            &.primary {
-                background: var(--primary);
-                color: var(--n-00);
-            }
-
-            &.accent {
-                background: var(--accent);
-                color: var(--n-00);
-            }
-
-            &.background {
-                background: var(--n-00);
-                color: var(--n-10);
-            }
-
-            &.foreground {
-                background: var(--n-10);
-                color: var(--n-00);
-            }
         }
     }
 
