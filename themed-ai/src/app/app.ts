@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   host: {
     '[style.--selected-color]': 'selectedColor()',
-    '[class.theme]': 'true'
   }
 })
 export class App {
