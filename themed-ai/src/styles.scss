@@ -1,10 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --primary: #30aa46;
-  --accent: hsl(from var(--primary) calc(h + 180) s l); 
+  color-scheme: light dark;
+  --background: light-dark(white, black);
+  --foreground: light-dark(black, white);
+  --primary: #2196f3;
   --shadow: rgb(0 0 0 / 0.3); 
+}
 
+:root, .theme {
+  --accent: hsl(from var(--primary) calc(h + 180) s l); 
   --n-00: color-mix(in srgb, var(--background), var(--foreground) 0%);
   --n-01: color-mix(in srgb, var(--background), var(--foreground) 10%);
   --n-02: color-mix(in srgb, var(--background), var(--foreground) 20%);
