@@ -13,5 +13,6 @@ export class App {
     { path: 'home', label: 'Home', icon: 'home' },
     { path: 'support', label: 'Support Chat', icon: 'support_agent' },
     { path: 'sales', label: 'Sales Chat', icon: 'storefront' },
+    { path: 'playground', label: 'Playground', icon: 'code' },
   ]);
 }

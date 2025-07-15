@@ -1,39 +1,45 @@
 :root {
-  --n-00: #ffffff;
-  --n-01: #f5f5f5;
-  --n-02: #e0e0e0;
-  --n-03: #cccccc;
-  --n-04: #b3b3b3;
-  --n-05: #999999;
-  --n-06: #7f7f7f;
-  --n-07: #666666;
-  --n-08: #4d4d4d;
-  --n-09: #262626;
-  --n-10: #000000;
+  --background: #ffffff;
+  --foreground: #000000;
+  --primary: #30aa46;
+  --accent: hsl(from var(--primary) calc(h + 180) s l); 
+  --shadow: rgb(0 0 0 / 0.3); 
 
-  --p-00: #ffffff;
-  --p-01: #e3f2fd;
-  --p-02: #bbdefb;
-  --p-03: #90caf9;
-  --p-04: #64b5f6;
-  --p-05: #2196f3;
-  --p-06: #1976d2;
-  --p-07: #1565c0;
-  --p-08: #0d47a1;
-  --p-09: #12305e;
-  --p-10: #000000;
+  --n-00: color-mix(in srgb, var(--background), var(--foreground) 0%);
+  --n-01: color-mix(in srgb, var(--background), var(--foreground) 10%);
+  --n-02: color-mix(in srgb, var(--background), var(--foreground) 20%);
+  --n-03: color-mix(in srgb, var(--background), var(--foreground) 30%);
+  --n-04: color-mix(in srgb, var(--background), var(--foreground) 40%);
+  --n-05: color-mix(in srgb, var(--background), var(--foreground) 50%);
+  --n-06: color-mix(in srgb, var(--background), var(--foreground) 60%);
+  --n-07: color-mix(in srgb, var(--background), var(--foreground) 70%);
+  --n-08: color-mix(in srgb, var(--background), var(--foreground) 80%);
+  --n-09: color-mix(in srgb, var(--background), var(--foreground) 90%);
+  --n-10: color-mix(in srgb, var(--background), var(--foreground) 100%);
 
-  --a-00: #ffffff;
-  --a-01: #ffe0f0;
-  --a-02: #ffb3d9;
-  --a-03: #ff80b6;
-  --a-04: #ff4d94;
-  --a-05: #f50057;
-  --a-06: #c51162;
-  --a-07: #880e4f;
-  --a-08: #560027;
-  --a-09: #2a0014;
-  --a-10: #000000;
+  --p-00: color-mix(in srgb, var(--primary), var(--background) 100%);
+  --p-01: color-mix(in srgb, var(--primary), var(--background) 80%);
+  --p-02: color-mix(in srgb, var(--primary), var(--background) 60%);
+  --p-03: color-mix(in srgb, var(--primary), var(--background) 40%);
+  --p-04: color-mix(in srgb, var(--primary), var(--background) 20%);
+  --p-05: var(--primary);
+  --p-06: color-mix(in srgb, var(--primary), var(--foreground) 20%);
+  --p-07: color-mix(in srgb, var(--primary), var(--foreground) 40%);
+  --p-08: color-mix(in srgb, var(--primary), var(--foreground) 60%);
+  --p-09: color-mix(in srgb, var(--primary), var(--foreground) 80%);
+  --p-10: color-mix(in srgb, var(--primary), var(--foreground) 100%);
+
+  --a-00: color-mix(in srgb, var(--accent), var(--background) 100%);
+  --a-01: color-mix(in srgb, var(--accent), var(--background) 80%);
+  --a-02: color-mix(in srgb, var(--accent), var(--background) 60%);
+  --a-03: color-mix(in srgb, var(--accent), var(--background) 40%);
+  --a-04: color-mix(in srgb, var(--accent), var(--background) 20%);
+  --a-05: var(--accent);
+  --a-06: color-mix(in srgb, var(--accent), var(--foreground) 20%);
+  --a-07: color-mix(in srgb, var(--accent), var(--foreground) 40%);
+  --a-08: color-mix(in srgb, var(--accent), var(--foreground) 60%);
+  --a-09: color-mix(in srgb, var(--accent), var(--foreground) 80%);
+  --a-10: color-mix(in srgb, var(--accent), var(--foreground) 100%);
 }
 
 *,
