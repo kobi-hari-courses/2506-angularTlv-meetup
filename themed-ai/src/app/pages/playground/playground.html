@@ -1,7 +1,24 @@
 <div class="bases">
+  <div class="selected">Selected</div>
   <div class="primary">Primary</div>
   <div class="accent">Accent</div>
   <div class="background">Background</div>
   <div class="foreground">Foreground</div>
 </div>
 
+<div class="entries">
+  @for (pal of palettes; track $index) {
+  <div class="palette">
+    <h1>{{pal.name}}</h1>
+    @for (shade of shades; track $index) {
+    <div
+      class="shade"
+      [style.background]="`var(--${pal.code}-${shade.entry})`"
+      [style.color]="`var(--n-${shade.contrast})`"
+    >
+      <span class="shade-name">{{pal.code}}-{{shade.entry}}</span>
+    </div>
+    }
+  </div>
+  }
+</div>
