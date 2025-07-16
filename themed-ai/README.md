@@ -1,59 +1,146 @@
-# ThemedAi
+# Theming an Angular Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.0.
+# Step 1 - Add Design Tokens
+```css
+:root, .theme {
+  --n-00: #ffffff;
+  --n-01: #e6e6e6;
+  --n-02: #cccccc;
+  --n-03: #b3b3b3;
+  --n-04: #999999;
+  --n-05: #808080;
+  --n-06: #666666;
+  --n-07: #4d4d4d;
+  --n-08: #333333;
+  --n-09: #1a1a1a;
+  --n-10: #000000;
 
-## Development server
+  --p-00: #eaf4fd;  
+  --p-01: #badcff;  
+  --p-02: #8ac4fc;  
+  --p-03: #5aabf8;  
+  --p-04: #2a92f4;  
+  --p-05: #2196f3;  
+  --p-06: #1a7ace;  
+  --p-07: #135eaa;  
+  --p-08: #0d4285;  
+  --p-09: #062561;  
+  --p-10: #000000;  
 
-To start a local development server, run:
-
-```bash
-ng serve
+  --a-00: #fdf3ea;  
+  --a-01: #f8d9bb;  
+  --a-02: #f3be8c;  
+  --a-03: #eea35d;  
+  --a-04: #e9882e;  
+  --a-05: #f37421;  
+  --a-06: #c45f1a;  
+  --a-07: #954913;  
+  --a-08: #66340d;  
+  --a-09: #381e06;  
+  --a-10: #000000;  
+}
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+# Step 2 - Apply on all CSS Color usages
+```css
+  border: 1px solid var(--n-04);
+    grid-area: toolbar;
+    background: linear-gradient(
+      90deg,
+      var(--p-07) 60%,
+      var(--p-08) 80%,
+      var(--p-09) 100%
+    );
+    color: var(--n-00);
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+# Step 3 - Create base tokens
+```css
+  --background: white;
+  --foreground: black;
+  --primary: #2196f3;
 ```
 
-## Building
+We can see them in the "playground" page
 
-To build the project run:
+# Step 4 - Apply "selected color" on Primary
+>app.ts
+```typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss'],
+  imports: [RouterModule, FormsModule],
+  standalone: true,
+  host: {
+    '[style.--primary]': 'selectedColor()',
+  }
+})
 
-```bash
-ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+# Step 5 - Accent is **Relative** to primary
+>styles.scss
+```css
+:root, .theme {
+  --accent: hsl(from var(--primary) calc(h + 180) s l); 
+}
 ```
 
-## Running end-to-end tests
+# Step 6 - Palette Entries using `color-mix`
+>styles.scss
+```css
+  --n-00: color-mix(in srgb, var(--background), var(--foreground) 0%);
+  --n-01: color-mix(in srgb, var(--background), var(--foreground) 10%);
+  --n-02: color-mix(in srgb, var(--background), var(--foreground) 20%);
+  --n-03: color-mix(in srgb, var(--background), var(--foreground) 30%);
+  --n-04: color-mix(in srgb, var(--background), var(--foreground) 40%);
+  --n-05: color-mix(in srgb, var(--background), var(--foreground) 50%);
+  --n-06: color-mix(in srgb, var(--background), var(--foreground) 60%);
+  --n-07: color-mix(in srgb, var(--background), var(--foreground) 70%);
+  --n-08: color-mix(in srgb, var(--background), var(--foreground) 80%);
+  --n-09: color-mix(in srgb, var(--background), var(--foreground) 90%);
+  --n-10: color-mix(in srgb, var(--background), var(--foreground) 100%);
 
-For end-to-end (e2e) testing, run:
+  --p-00: color-mix(in srgb, var(--primary), var(--background) 100%);
+  --p-01: color-mix(in srgb, var(--primary), var(--background) 80%);
+  --p-02: color-mix(in srgb, var(--primary), var(--background) 60%);
+  --p-03: color-mix(in srgb, var(--primary), var(--background) 40%);
+  --p-04: color-mix(in srgb, var(--primary), var(--background) 20%);
+  --p-05: var(--primary);
+  --p-06: color-mix(in srgb, var(--primary), var(--foreground) 20%);
+  --p-07: color-mix(in srgb, var(--primary), var(--foreground) 40%);
+  --p-08: color-mix(in srgb, var(--primary), var(--foreground) 60%);
+  --p-09: color-mix(in srgb, var(--primary), var(--foreground) 80%);
+  --p-10: color-mix(in srgb, var(--primary), var(--foreground) 100%);
 
-```bash
-ng e2e
+  --a-00: color-mix(in srgb, var(--accent), var(--background) 100%);
+  --a-01: color-mix(in srgb, var(--accent), var(--background) 80%);
+  --a-02: color-mix(in srgb, var(--accent), var(--background) 60%);
+  --a-03: color-mix(in srgb, var(--accent), var(--background) 40%);
+  --a-04: color-mix(in srgb, var(--accent), var(--background) 20%);
+  --a-05: var(--accent);
+  --a-06: color-mix(in srgb, var(--accent), var(--foreground) 20%);
+  --a-07: color-mix(in srgb, var(--accent), var(--foreground) 40%);
+  --a-08: color-mix(in srgb, var(--accent), var(--foreground) 60%);
+  --a-09: color-mix(in srgb, var(--accent), var(--foreground) 80%);
+  --a-10: color-mix(in srgb, var(--accent), var(--foreground) 100%);
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+# Step 7 - Use `color-scheme` to set light or dark mode
+>styles.scss
+```css
+:root {
+  color-scheme: light dark;
+}
+```
 
-## Additional Resources
+# Step 8 - Use `light-dark` to set background and forground
+>styles.scss
+```css
+  --background: light-dark(white, black);
+  --foreground: light-dark(black, white);
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Step 9 - Constraint the primary color
+You can use relative color syntax to limit the saturation and lightness of the primary color
