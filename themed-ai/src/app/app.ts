@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule, FormsModule],
   standalone: true,
   host: {
-    '[style.--primary]': 'selectedColor()'
+    '[style.--selected]': 'selectedColor()'
   }
 })
 export class App {

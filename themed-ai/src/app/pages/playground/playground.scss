@@ -15,6 +15,10 @@
             align-items: center;
             justify-content: center;
 
+            &.selected {
+                background: var(--selected);
+                color: var(--n-00);
+            }
             &.primary {
                 background: var(--primary);
                 color: var(--n-00);

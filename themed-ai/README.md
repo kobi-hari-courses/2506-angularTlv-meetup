@@ -135,12 +135,15 @@ We can see them in the "playground" page
 }
 ```
 
-## Use `light-dark` to set background and forground
+# Step 8 - Use `light-dark` to set background and forground
 >styles.scss
 ```css
   --background: light-dark(white, black);
   --foreground: light-dark(black, white);
 ```
 
-# Step 8 - Constraint the primary color
-You can use relative color syntax to limit the saturation and lightness of the primary color
+# Step 9 - Constraint the primary color
+>app.scss
+```css
+--primary: hsl(from var(--selected) h max(s, 20) clamp(40, l, 60));
+```
