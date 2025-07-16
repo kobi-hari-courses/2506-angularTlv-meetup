@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.scss'],
   imports: [RouterModule, FormsModule],
   standalone: true,
+  host: {
+    '[style.--primary]': 'selectedColor()'
+  }
 })
 export class App {
   readonly selectedColor = signal('#2196f3');
