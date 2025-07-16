@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+
+.mine {
+    @include mat.theme((
+        color: mat.$rose-palette
+    ))
+}
