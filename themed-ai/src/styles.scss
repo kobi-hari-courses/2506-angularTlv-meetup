@@ -1,6 +1,7 @@
 :root {
-  --background: white;
-  --foreground: black;
+  color-scheme: light dark;
+  --background: light-dark(white, black);
+  --foreground: light-dark(black, white);
   --primary: #2196f3;
   --shadow: rgb(0 0 0 / 0.3);
 }
