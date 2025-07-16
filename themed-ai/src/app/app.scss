@@ -12,16 +12,16 @@
     grid-area: toolbar;
     background: linear-gradient(
       90deg,
-      #135eaa 60%,
-      #0d4285 80%,
-      #062561 100%
+      var(--p-07) 60%,
+      var(--p-08) 80%,
+      var(--p-09) 100%
     );
-    color: #ffffff;
+    color: var(--n-00);
     display: flex;
     align-items: center;
     padding: 0 32px;
     font-size: 1.25rem;
-    box-shadow: 0 2px 4px #cccccc;
+    box-shadow: 0 2px 4px var(--n-02);
     justify-content: space-between;
 
     .logo {
@@ -36,7 +36,7 @@
       }
 
       .icon-main {
-        color: #8ac4fc;
+        color: var(--p-02);
         border-radius: 50%;
         padding: 6px;
       }
@@ -48,7 +48,7 @@
       height: 30px;
       border-radius: 50%;
       overflow: hidden;
-      border: 2px solid #8ac4fc;
+      border: 2px solid var(--p-02);
       
 
       input[type="color"] {
@@ -66,13 +66,13 @@
 
   .app-sidebar {
     grid-area: sidebar;
-    background: #8ac4fc;
-    color: #ffffff;
+    background: var(--p-02);
+    color: var(--n-00);
     padding: 24px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-right: 1px solid #0d4285;
+    border-right: 1px solid var(--p-08);
 
     nav {
       display: flex;
@@ -82,7 +82,7 @@
       a {
         padding: 12px 24px;
         background: transparent;
-        color: #0d4285;
+        color: var(--p-08);
         text-decoration: none;
         font-weight: 500;
         border-left: 4px solid transparent;
@@ -92,22 +92,22 @@
         align-items: center;
 
         &.active {
-          background: #2a92f4;
-          color: #000000;
-          border-left: 4px solid #f37421;
+          background: var(--p-04);
+          color: var(--p-10);
+          border-left: 4px solid var(--a-05);
 
           .icon-nav {
-            color: #062561;
+            color: var(--p-09);
           }
         }
 
         &:hover:not(.active) {
-          background: #5aabf8;
-          color: #0d4285;
+          background: var(--p-03);
+          color: var(--p-08);
         }
 
         .icon-nav {
-          color: #2196f3;
+          color: var(--p-05);
           margin-right: 10px;
         }
       }
@@ -115,7 +115,7 @@
   }
   .app-main {
     grid-area: main;
-    background: #e6e6e6;
+    background: var(--n-01);
     padding: 32px;
     overflow: auto;
     min-height: 0;
