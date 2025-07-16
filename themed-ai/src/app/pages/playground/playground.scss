@@ -19,6 +19,10 @@
                 background: var(--primary);
                 color: var(--n-00);
             }
+            &.accent {
+                background: var(--accent);
+                color: var(--n-00);
+            }
             &.background {
                 background: var(--background);
                 color: var(--n-10);

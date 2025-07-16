@@ -6,6 +6,8 @@
 }
 
 :root, .theme {
+  --accent: hsl(from var(--primary) calc(h + 180) s l);
+
   --n-00: #ffffff;
   --n-01: #e6e6e6;
   --n-02: #cccccc;
