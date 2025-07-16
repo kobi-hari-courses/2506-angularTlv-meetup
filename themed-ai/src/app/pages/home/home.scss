@@ -2,7 +2,7 @@
   display: block;
 
   .page {
-    background: var(--n-00);
+    background: #ffffff;
     padding: 32px;
     border-radius: 10px;
     max-width: 880px;
@@ -12,7 +12,7 @@
     gap: 12px;
 
     h1 {
-      color: var(--p-07);
+      color: #135eaa;
       .icon-accent {
         margin-right: 6px;
         vertical-align: middle;
@@ -23,25 +23,25 @@
     .quick-tips,
     .fun-fact {
       padding: 14px 18px;
-      background: var(--n-01);
+      background: #e6e6e6;
       border-radius: 8px;
       font-size: 1.05em;
     }
     .about-app h3,
     .quick-tips h3 {
       margin-top: 0;
-      color: var(--p-07);
+      color: #135eaa;
       font-size: 1em;
       margin-bottom: 7px;
     }
     .quick-tips ul {
       padding-left: 18px;
       margin: 0;
-      color: var(--n-08);
+      color: #333333;
     }
     .fun-fact {
-      background: var(--a-01);
-      color: var(--a-08);
+      background: #f8d9bb;
+      color: #66340d;
       display: flex;
       align-items: center;
       font-size: 1.08em;
@@ -62,21 +62,21 @@
         padding: 18px 16px;
         gap: 16px;
         box-shadow: none;
-        border: 1.5px solid var(--n-02);
-        background: var(--p-01);
+        border: 1.5px solid #cccccc;
+        background: #badcff;
         &.primary {
-          background: var(--p-02);
-          color: var(--p-09);
+          background: #8ac4fc;
+          color: #062561;
           border: none;
         }
         &.accent {
-          background: var(--a-03);
-          color: var(--a-09);
+          background: #eea35d;
+          color: #381e06;
           border: none;
         }
         &.dark-primary {
-          background: var(--p-07);
-          color: var(--n-00);
+          background: #135eaa;
+          color: #ffffff;
           border: none;
         }
         .stat-icon {
@@ -101,15 +101,15 @@
 
     .dashboard-chart {
       padding: 16px 16px 20px 16px;
-      background: linear-gradient(90deg, var(--p-01) 80%, var(--n-00) 100%);
+      background: linear-gradient(90deg, #badcff 80%, #ffffff 100%);
       border-radius: 10px;
-      border: 1px solid var(--n-03);
+      border: 1px solid #b3b3b3;
 
       h2 {
         display: flex;
         align-items: center;
         font-size: 1.1em;
-        color: var(--p-08);
+        color: #0d4285;
         margin-bottom: 12px;
         gap: 10px;
         .icon-accent {
@@ -127,12 +127,12 @@
       .bar-label {
         font-size: 13px;
         font-weight: 500;
-        fill: var(--n-07);
+        fill: #4d4d4d;
       }
       .bar-value {
         font-size: 15px;
         font-weight: bold;
-        fill: var(--n-10);
+        fill: #000000;
       }
     }
   }
