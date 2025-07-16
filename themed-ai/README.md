@@ -144,3 +144,8 @@ We can see them in the "playground" page
 
 # Step 9 - Constraint the primary color
 You can use relative color syntax to limit the saturation and lightness of the primary color
+
+>app.scss
+```css
+--primary: oklch(from var(--selected-color) 0.6 max(c, 0.06) h);
+```
