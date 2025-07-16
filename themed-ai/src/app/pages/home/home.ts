@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
 })
 export class HomeComponent {
-  readonly #colors = ['#5aabf8', '#2a92f4', '#2196f3', '#1a7ace'];
+  readonly #colors = ['var(--p-03)', 'var(--p-04)', 'var(--p-05)', 'var(--p-06)'];
 
   bars = [
     this.getBarItem(0, 413, 'Support'),
